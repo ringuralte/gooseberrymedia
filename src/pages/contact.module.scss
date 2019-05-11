@@ -1,0 +1,10 @@
+@import '../styles/mixins';
+
+.wrapper {
+  display: grid;
+
+  @include atLarge {
+    padding: 1rem;
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,0 +1,1 @@
+Gooseberry Studio is a state of the art recording and video studio set up to make your dreams into reality. For experienced and amateurs alike you will find use a friendly team who can record and produce your music, video and films professionally.
