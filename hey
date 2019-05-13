@@ -1,0 +1,83 @@
+
+> gatsby-starter-hello-world@0.1.0 start /home/ringu/sites/gooseberrymedia
+> npm run develop "develop"
+
+
+> gatsby-starter-hello-world@0.1.0 develop /home/ringu/sites/gooseberrymedia
+> env-cmd .env gatsby develop "develop"
+
+success open and validate gatsby-configs — 0.004 s
+success load plugins — 0.257 s
+success onPreInit — 0.004 s
+success initialize cache — 0.006 s
+success copy gatsby files — 0.011 s
+success onPreBootstrap — 0.005 s
+success source and transform nodes — 0.101 s
+success building schema — 0.155 s
+success createPages — 0.000 s
+success createPagesStatefully — 0.035 s
+success onPreExtractQueries — 0.001 s
+success update schema — 0.017 s
+Exported queries are only executed for Page components. It's possible you're
+trying to create pages in your gatsby-node.js and that's failing for some
+reason.
+
+If the failing component(s) is a regular component and not intended to be a page
+component, you generally want to use a <StaticQuery> (https://gatsbyjs.org/docs/static-query)
+instead of exporting a page query.
+
+If you're more experienced with GraphQL, you can also export GraphQL
+fragments from components and compose the fragments in the Page component
+query and pass data down into the child component — http://graphql.org/learn/queries/#fragments
+success extract queries from components — 0.187 s
+success run static queries — 0.001 s
+success run page queries — 0.015 s — 2/2 138.29 queries/second
+success write out page data — 0.005 s
+success write out redirect data — 0.001 s
+success onPostBootstrap — 0.000 s
+
+info bootstrap finished - 2.346 s
+
+ WARNING  Compiled with 1 warnings8:35:43 PM
+
+Module Warning (from ./node_modules/eslint-loader/index.js):
+
+/home/ringu/sites/gooseberrymedia/src/pages/index.js
+  138:7  warning  The href attribute is required for an anchor to be keyboard accessible. Provide a valid, navigable address as the href value. If you cannot provide an href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-is-valid.md  jsx-a11y/anchor-is-valid
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+You may use special comments to disable some warnings.
+Use // eslint-disable-next-line to ignore the next line.
+Use /* eslint-disable */ to ignore all warnings in a file.
+
+You can now view gatsby-starter-hello-world in the browser.
+
+  http://localhost:8000/
+
+View the GraphQL Playground, an in-browser IDE, to explore your site's data and schema
+
+  http://localhost:8000/___graphql
+
+Note that the development build is not optimized.
+To create a production build, use npm run build
+
+info [34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+ WAIT  Compiling...8:35:43 PM
+
+info [34mℹ[39m [90m｢wdm｣[39m: Compiling...
+ WARNING  Compiled with 1 warnings8:35:44 PM
+
+Module Warning (from ./node_modules/eslint-loader/index.js):
+
+/home/ringu/sites/gooseberrymedia/src/pages/index.js
+  138:7  warning  The href attribute is required for an anchor to be keyboard accessible. Provide a valid, navigable address as the href value. If you cannot provide an href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-is-valid.md  jsx-a11y/anchor-is-valid
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+You may use special comments to disable some warnings.
+Use // eslint-disable-next-line to ignore the next line.
+Use /* eslint-disable */ to ignore all warnings in a file.
+info [34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.

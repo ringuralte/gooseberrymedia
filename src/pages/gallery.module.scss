@@ -6,7 +6,7 @@
 
 .wrapper {
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 1rem 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: .2em;
@@ -17,14 +17,46 @@
 
   @include atMedium {
     width: 85vw;
-    padding: 4rem 2rem;
+    padding: 3rem 2rem;
   }
 
   @include atLarge {
+    padding: 4rem 2rem;
     width: 50vw;
   }
 }
 
 .gallery-image {
   object-fit: cover;
+}
+
+.dialog-image {
+  width: 100%;
+
+}
+
+.dialog {
+  width: 100vw;
+  padding: .5rem 0;
+  background-color: rgba($mainWhite, 0.7);
+  
+  button{
+    background-color: $secondGreen;
+    border: 1px solid $secondBlack;
+    border-radius: 50%;
+    color: $mainWhite;
+    font-weight: 900;
+    margin-bottom: .3rem;
+    margin-right: .3rem;
+    display: block;
+    margin-left: auto;
+  }
+
+  @include atMedium {
+    width: 75vw;
+  }
+
+  @include atLarge {
+    width: 50vw;
+  }
 }

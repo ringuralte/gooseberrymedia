@@ -1,15 +1,18 @@
-@import '../styles/variables';
-@import '../styles/mixins';
+@import "../styles/variables";
+@import "../styles/mixins";
 
 .header {
   position: absolute;
   z-index: 2;
   left: 0;
   right: 0;
-  background-color: rgba($mainBlack, 0.7);
 }
 
-.head-wrapper{
+.header-opaque {
+  background-color: $mainWhite;
+}
+
+.head-wrapper {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -23,24 +26,13 @@
   }
 }
 
-.headline {
-  display: flex;
-
-  h1 {
-    margin: 12px 0 12px 15px;
-  }
-}
-
-.header-opaque {
-  background-color: $mainGreen;
-}
-
 .menu-button {
-  width: 30px;
+  width: 20px;
   height: 20px;
+  z-index: 3;
   position: absolute;
-  left: 30px;
-  top: 35px;
+  right: 15px;
+  top: 15px;
 
   &::before {
     content: "";
@@ -49,9 +41,9 @@
     left: 0;
     width: 20px;
     height: 3px;
-    background-color: $mainWhite;
+    background-color: $secondBlack;
     transform-origin: 0 0;
-    transition: transform .5s ease-out;
+    transition: transform 0.5s ease-out;
   }
 
   &-middle {
@@ -60,8 +52,8 @@
     left: 0;
     width: 20px;
     height: 3px;
-    background-color: $mainWhite;
-    transition: all .5s ease-out;
+    background-color: $secondBlack;
+    transition: all 0.5s ease-out;
     transform-origin: 0 50%;
   }
 
@@ -72,9 +64,9 @@
     left: 0;
     width: 20px;
     height: 3px;
-    background-color: $mainWhite;
+    background-color: $secondBlack;
     transform-origin: 0 100%;
-    transition: transform .5s ease-out;
+    transition: transform 0.5s ease-out;
   }
 
   @include atMedium {
@@ -97,6 +89,25 @@
   }
 }
 
+.site-logo {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  z-index: 4;
+  top: 5px;
+  left: 0px;
+
+  @include atMedium {
+    width: 75px;
+    height: 75px;
+    left: 10px;
+  }
+
+  @include atLarge {
+    left: 30px;
+  }
+}
+
 .headline-text {
   font-size: 1.25rem;
   color: $mainWhite;
@@ -104,21 +115,78 @@
 
   @include atSmall {
     font-size: 2rem;
-  } 
+  }
+}
+
+.active-nav {
+  width: 100vw;
+  background-color: rgba($mainBlack, 0.7);
+  animation: slide-down 0.4s ease-out;
+
+}
+
+.active-nav-transparent {
+  width: 100vw;
+  background-color: white;
+  animation: slide-down 0.4s ease-out;
+}
+
+.nav {
+  transform: translateY(-100%);
+
+  @include atMedium {
+    transform: translateY(0);
+  }
+}
+
+.nav-transparent {
+  transform: translateY(-100%);
+
+  @include atMedium {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    transform: translateY(0);
+    background-color: rgba($mainBlack, 0.7);
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.no-logo {
+  margin-top: 0.2rem;
+  margin-bottom: 0;
+  color: $secondBlack;
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 20px;
+  font-size: 1.5rem;
 }
 
 .header-nav {
   display: flex;
+  width: 75vw;
+  justify-content: space-around;
   list-style-type: none;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
+
+  @include atMedium {
+    width: 50vw;
+  }
 }
 
 .nav-item {
-  margin-right: 1.3rem;
   font-weight: 800;
   text-decoration: none;
   color: $mainWhite;
-  font-size: .8rem;
+  font-size: 0.8rem;
 
   @include atSmall {
     font-size: 1rem;
@@ -133,20 +201,21 @@
   color: $mainYellow;
 }
 
-.active-nav {
-  display: block;
-  animation: slide-down .4s ease-out;
-}
+.nav-item-opaque {
+  font-weight: 800;
+  text-decoration: none;
+  color: $secondBlack;
+  font-size: 0.8rem;
 
-.nav {
-  display: none;
-
-  @include atMedium {
-    display: block;
+  @include atSmall {
+    font-size: 1rem;
   }
 }
 
-@keyframes slide-down {
-  0% { transform: translateY(-100%); }
-  100%  { transform: translateY(0); }
+.nav-item-opaque:hover {
+  color: $mainGreen;
+}
+
+.nav-item-opaque-active {
+  color: $mainGreen;
 }

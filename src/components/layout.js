@@ -11,8 +11,8 @@ const Layout = (props) => {
       <div className={layoutStyles.content}>
         <Header transparent={props.transparent}/>
         {props.children}
-        </div>
-        <Footer />
+      </div>
+      <Footer />
     </div>
   )
 }

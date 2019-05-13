@@ -6,7 +6,7 @@ import aboutStyles from './about.module.scss'
 const About = () => {
   return (
     <Layout transparent={false}>
-      <div className={aboutStyles.container}>
+      <div className={aboutStyles.wrapper}>
         <div className={aboutStyles.block}>
           <h2 className={aboutStyles.header}>About Us</h2>
           <p>Gooseberry studio is a state of the art recording and video studio set up to take your dreams into realities. For experienced and amateurs alike you will find us as a friendly team who can record and produce your music, videos and films professionally.</p>

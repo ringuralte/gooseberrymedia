@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
+import Fade from "react-reveal/Fade"
 
 import Layout from "../components/layout"
 import ContactForm from "../components/contact"
@@ -12,6 +13,7 @@ const Home = props => {
       <div className={homeStyles.home}>
         <div className={homeStyles.headlineText}>
           <div className={homeStyles.headlineTextWrapper}>
+            <h1>Gooseberry Studios</h1>
             <h2 className={homeStyles.headlineTextUpper}> Turn your Dreams </h2>
             <p className={homeStyles.headlineTextStrong}>
               into <h2 className={homeStyles.headlineTextYellow}>Reality</h2>
@@ -29,7 +31,9 @@ const Home = props => {
           fluid={props.data.heroImage.childImageSharp.fluid}
         />
       </div>
+
       <div className={homeStyles.line} />
+
       <div className={homeStyles.heroText}>
         <p>
           Gooseberry Studio is a state of the art recording and video studio set
@@ -42,88 +46,103 @@ const Home = props => {
           </span>
         </p>
       </div>
+
       <div className={homeStyles.imageGrid}>
-        <div>
+        <Fade>
           <Img
             className={homeStyles.gridImageFront}
             fluid={props.data.studioFront.childImageSharp.fluid}
           />
-        </div>
+        </Fade>
+
         <div className={homeStyles.hiddenBlock}>
-          <p>
-            For experienced and amateurs alike, you will find us a friendly team
-            who can record and produce your music, video and films
-            professionally
-          </p>
+          <Fade>
+            <p>
+              For experienced and amateurs alike, you will find us a friendly
+              team who can record and produce your music, video and films
+              professionally
+            </p>
+          </Fade>
         </div>
+
         <div className={homeStyles.fourGrids}>
-          <div>
+          <Fade>
             <Img
               alt="Control Room"
               className={homeStyles.gridImage}
               fluid={props.data.controlTwo.childImageSharp.fluid}
             />
-          </div>
-          <div>
+          </Fade>
+          <Fade>
             <Img
               alt="Solo Recording Room"
               className={homeStyles.gridImage}
               fluid={props.data.controlOne.childImageSharp.fluid}
             />
-          </div>
-          <div>
+          </Fade>
+          <Fade>
             <Img
               alt="Production room one"
               className={homeStyles.gridImage}
               fluid={props.data.productionOne.childImageSharp.fluid}
             />
-          </div>
-          <div>
+          </Fade>
+          <Fade>
             <Img
               alt="Production room one"
               className={homeStyles.gridImage}
               fluid={props.data.productionTwo.childImageSharp.fluid}
             />
-          </div>
+          </Fade>
         </div>
       </div>
+
       <div className={homeStyles.cardWrapper}>
         <div className={homeStyles.cards}>
-          <div className={homeStyles.cardContent}>
-            <Img
-              className={homeStyles.cardImages}
-              fluid={props.data.micVocals.childImageSharp.fluid}
-            />
-            <h4>Recording</h4>
-            <p>
-              Gooseberry Studios is equipped with the best audio recording tools
-              to help bring your ideas to life.
-            </p>
-          </div>
-          <div className={homeStyles.cardContent}>
-            <Img
-              className={homeStyles.cardImages}
-              fluid={props.data.film.childImageSharp.fluid}
-            />
-            <h4>Videos</h4>
-            <p>
-              We also make Music Videos and Films and have collaborated in
-              projects such as the Bayberry Sessions.
-            </p>
-          </div>
-          <div className={homeStyles.cardContent}>
-            <Img
-              className={homeStyles.cardImages}
-              fluid={props.data.events.childImageSharp.fluid}
-            />
-            <h4>Events</h4>
-            <p>
-              We can also cover Events such as Weddings, Birthday parties,
-              Sporting events and other Local shows.
-            </p>
-          </div>
+          <Fade>
+            <div className={homeStyles.cardContent}>
+              <Img
+                className={homeStyles.cardImages}
+                fluid={props.data.micVocals.childImageSharp.fluid}
+              />
+              <h4>Recording</h4>
+              <p>
+                Gooseberry Studios is equipped with the best audio recording
+                tools to help bring your ideas to life.
+              </p>
+            </div>
+          </Fade>
+
+          <Fade>
+            <div className={homeStyles.cardContent}>
+              <Img
+                className={homeStyles.cardImages}
+                fluid={props.data.film.childImageSharp.fluid}
+              />
+              <h4>Videos</h4>
+              <p>
+                We also make Music Videos and Films and have collaborated in
+                projects such as the Bayberry Sessions.
+              </p>
+            </div>
+          </Fade>
+
+          <Fade>
+            <div className={homeStyles.cardContent}>
+              <Img
+                className={homeStyles.cardImages}
+                fluid={props.data.events.childImageSharp.fluid}
+              />
+              <h4>Events</h4>
+              <p>
+                We can also cover Events such as Weddings, Birthday parties,
+                Sporting events and other Local shows.
+              </p>
+            </div>
+          </Fade>
         </div>
       </div>
+
       <a id="form">
         <ContactForm />
       </a>

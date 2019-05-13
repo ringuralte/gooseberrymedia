@@ -14,13 +14,14 @@ const Footer = () => {
         </div>
         <div className={footerStyles.block}>
           <p>email: info@gooseberrymedia.in</p>
-          <p>Tel : +91996114838, +919650657715</p>
+          <p><a className={footerStyles.phone} href="tel: +91996114838">Tel : +91996114838</a><a className={footerStyles.phone} href="tel: +919650657715"> +919650657715</a></p>
         </div>
         <div className={footerStyles.block}>
           <ul className={footerStyles.nav}>
             <li><Link className={footerStyles.navItem} to='/'>Home</Link></li>
             <li><Link className={footerStyles.navItem} to='/gallery'>Gallery</Link></li>
             <li><Link className={footerStyles.navItem} to='/about'>About</Link></li>
+            <li><Link className={footerStyles.navItem} to='/contact'>Contact</Link></li>
           </ul>
         </div>
       </div>
