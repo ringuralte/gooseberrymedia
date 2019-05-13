@@ -261,7 +261,7 @@ export default Gallery
 export const galleryImages = graphql`
   fragment galleryImages on File {
     childImageSharp {
-      fluid(maxWidth: 900, quality: 100) {
+      fluid(maxWidth: 900) {
         ...GatsbyImageSharpFluid
       }
     }

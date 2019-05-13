@@ -157,7 +157,7 @@ export default Home
 export const theFourGrids = graphql`
   fragment theFourGrids on File {
     childImageSharp {
-      fluid(maxWidth: 600, quality: 100) {
+      fluid(maxWidth: 600) {
         ...GatsbyImageSharpFluid
       }
     }
@@ -167,7 +167,7 @@ export const theFourGrids = graphql`
 export const pngFiles = graphql`
   fragment pngFiles on File {
     childImageSharp {
-      fluid(maxWidth: 160, quality: 100) {
+      fluid(maxWidth: 160) {
         ...GatsbyImageSharpFluid
       }
     }
@@ -178,7 +178,7 @@ export const query = graphql`
   query {
     heroImage: file(relativePath: { eq: "hero-img.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1600, quality: 100) {
+        fluid(maxWidth: 1600) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -188,7 +188,7 @@ export const query = graphql`
     }
     studioFront: file(relativePath: { eq: "studio-front.jpeg" }) {
       childImageSharp {
-        fluid(maxWidth: 1280, quality: 100) {
+        fluid(maxWidth: 1280) {
           ...GatsbyImageSharpFluid
         }
       }

@@ -63,7 +63,7 @@ export default props => (
       query {
         siteIcon: file(relativePath: { eq: "logo1.png" }) {
           childImageSharp {
-            fluid(maxWidth: 100, quality: 100) {
+            fluid(maxWidth: 100) {
               ...GatsbyImageSharpFluid
             }
           }
