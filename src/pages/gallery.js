@@ -5,6 +5,7 @@ import { DialogContent, DialogOverlay } from "@reach/dialog"
 import "@reach/dialog/styles.css"
 
 import Layout from "../components/layout"
+import Head from "../components/head"
 import galleryStyles from "./gallery.module.scss"
 
 class Gallery extends React.Component {
@@ -19,6 +20,7 @@ class Gallery extends React.Component {
   render() {
     return (
       <Layout transparent={false}>
+        <Head title="Gallery" />
        
         <DialogOverlay 
           style={{ background: "hsla(0, 100%, 100%, 0.7)" }}

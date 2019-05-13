@@ -1,11 +1,13 @@
 import React from 'react'
 
 import Layout from '../components/layout'
+import Head from '../components/head'
 import aboutStyles from './about.module.scss'
 
 const About = () => {
   return (
     <Layout transparent={false}>
+      <Head title="About" />
       <div className={aboutStyles.wrapper}>
         <div className={aboutStyles.block}>
           <h2 className={aboutStyles.header}>About Us</h2>

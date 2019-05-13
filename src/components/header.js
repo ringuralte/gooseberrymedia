@@ -33,7 +33,7 @@ class Header extends React.Component {
           </div>
 
           <div className={headerStyles.siteLogo}>
-            <Img className={headerStyles.siteLogoInner}
+            <Img 
               alt="gooseberry logo"
               fluid={this.props.data.childImageSharp.fluid}
             />
@@ -63,7 +63,7 @@ export default props => (
       query {
         siteIcon: file(relativePath: { eq: "logo1.png" }) {
           childImageSharp {
-            fluid(maxWidth: 200, quality: 100) {
+            fluid(maxWidth: 100, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }

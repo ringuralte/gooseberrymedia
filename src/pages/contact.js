@@ -3,12 +3,14 @@ import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
+import Head from "../components/head"
 import contactPageStyles from "./contact.module.scss"
 import ContactForm from "../components/contact"
 
 const Contact = props => {
   return (
     <Layout transparent={false}>
+      <Head title="Contact" />
       <div className={contactPageStyles.wrapper}>
         <div className={contactPageStyles.info}>
           <div className={contactPageStyles.textArea}>

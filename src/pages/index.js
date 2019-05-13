@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import Fade from "react-reveal/Fade"
 
+import Head from "../components/head"
 import Layout from "../components/layout"
 import ContactForm from "../components/contact"
 import homeStyles from "./home.module.scss"
@@ -10,6 +11,7 @@ import homeStyles from "./home.module.scss"
 const Home = props => {
   return (
     <Layout transparent={true}>
+      <Head title="Home" />
       <div className={homeStyles.home}>
         <div className={homeStyles.headlineText}>
           <div className={homeStyles.headlineTextWrapper}>
@@ -155,7 +157,7 @@ export default Home
 export const theFourGrids = graphql`
   fragment theFourGrids on File {
     childImageSharp {
-      fluid(maxWidth: 800, quality: 100) {
+      fluid(maxWidth: 600, quality: 100) {
         ...GatsbyImageSharpFluid
       }
     }
@@ -176,7 +178,7 @@ export const query = graphql`
   query {
     heroImage: file(relativePath: { eq: "hero-img.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1920, quality: 100) {
+        fluid(maxWidth: 1600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
