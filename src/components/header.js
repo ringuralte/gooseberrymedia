@@ -33,10 +33,12 @@ class Header extends React.Component {
           </div>
 
           <div className={headerStyles.siteLogo}>
+            <Link to='/'>
             <Img 
               alt="gooseberry logo"
               fluid={this.props.data.childImageSharp.fluid}
             />
+            </Link>
           </div>
           
           <nav className={this.state.isMenuActive
