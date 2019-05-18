@@ -38,8 +38,8 @@ const ContactForm = () => {
         </div>
         <div className={contactStyles.button}>
           <input className={contactStyles.buttonInput} type="submit" value="Submit" />
-          <div data-netlify-recaptcha="true"></div>
         </div>
+        <div data-netlify-recaptcha="true"></div>
       </form>
     </div>
   )
