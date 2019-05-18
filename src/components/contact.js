@@ -10,7 +10,6 @@ const ContactForm = () => {
         name="contact"
         method="post" 
         data-netlify="true"
-        data-netlify-recaptcha="true"
         data-netlify-honeypot="bot-field"
         action="#"
       >
@@ -38,7 +37,6 @@ const ContactForm = () => {
         </div>
         <div className={contactStyles.button}>
           <input className={contactStyles.buttonInput} type="submit" value="Submit" />
-          <div data-netlify-recaptcha />
         </div>
       </form>
     </div>
