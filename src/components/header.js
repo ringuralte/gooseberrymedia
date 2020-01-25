@@ -1,7 +1,7 @@
-import React from 'react'
-import { Link, graphql, StaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
-import headerStyles from  './header.module.scss'
+import React from "react"
+import { Link, graphql, StaticQuery } from "gatsby"
+import Img from "gatsby-image"
+import headerStyles from "./header.module.scss"
 
 class Header extends React.Component {
   constructor(props) {
@@ -18,14 +18,13 @@ class Header extends React.Component {
 
   render() {
     return (
-      <header className={this.props.transparent ? headerStyles.header : headerStyles.headerOpaque}>
-
+      <header className={headerStyles.header}>
         <div className={headerStyles.headWrapper}>
-
-          <div className={
-            this.state.isMenuActive
-              ? `${headerStyles.menuButton} ${headerStyles.menuButtonClose}`
-              : headerStyles.menuButton
+          <div
+            className={
+              this.state.isMenuActive
+                ? `${headerStyles.menuButton} ${headerStyles.menuButtonClose}`
+                : headerStyles.menuButton
             }
             onClick={this.toggleMenuAnimation}
           >
@@ -33,27 +32,61 @@ class Header extends React.Component {
           </div>
 
           <div className={headerStyles.siteLogo}>
-            <Link to='/'>
-            <Img 
-              alt="gooseberry logo"
-              fluid={this.props.data.childImageSharp.fluid}
-            />
+            <Link to="/">
+              <Img
+                alt="gooseberry logo"
+                fluid={this.props.data.childImageSharp.fluid}
+              />
             </Link>
           </div>
-          
-          <nav className={this.state.isMenuActive
-                ? this.props.transparent ? headerStyles.activeNav : headerStyles.activeNavTransparent
-                : this.props.transparent ? headerStyles.navTransparent: headerStyles.nav}>
+
+          <nav
+            className={
+              this.state.isMenuActive
+                ? headerStyles.activeNav
+                : headerStyles.nav
+            }
+          >
             <ul className={headerStyles.headerNav}>
-              <li><Link className={this.props.transparent ? headerStyles.navItem : headerStyles.navItemOpaque} activeClassName={this.props.transparent ? headerStyles.navItemActive : headerStyles.navItemOpaqueActive} to='/'>Home</Link></li>
-              <li><Link className={this.props.transparent ? headerStyles.navItem : headerStyles.navItemOpaque} activeClassName={this.props.transparent ? headerStyles.navItemActive : headerStyles.navItemOpaqueActive} to='/gallery'>Gallery</Link></li>
-              <li><Link className={this.props.transparent ? headerStyles.navItem : headerStyles.navItemOpaque} activeClassName={this.props.transparent ? headerStyles.navItemActive : headerStyles.navItemOpaqueActive} to='/about'>About</Link></li>
-              <li><Link className={this.props.transparent ? headerStyles.navItem : headerStyles.navItemOpaque} activeClassName={this.props.transparent ? headerStyles.navItemActive : headerStyles.navItemOpaqueActive} to='/contact'>Contact</Link></li>
+              <li>
+                <Link
+                  className={headerStyles.navItem}
+                  activeClassName={headerStyles.navItemActive}
+                  to="/"
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className={headerStyles.navItem}
+                  activeClassName={headerStyles.navItemActive}
+                  to="/gallery"
+                >
+                  Gallery
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className={headerStyles.navItem}
+                  activeClassName={headerStyles.navItemActive}
+                  to="/about"
+                >
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className={headerStyles.navItem}
+                  activeClassName={headerStyles.navItemActive}
+                  to="/contact"
+                >
+                  Contact
+                </Link>
+              </li>
             </ul>
           </nav>
-        
         </div>
-
       </header>
     )
   }
@@ -61,7 +94,7 @@ class Header extends React.Component {
 
 export default props => (
   <StaticQuery
-    query = { graphql`
+    query={graphql`
       query {
         siteIcon: file(relativePath: { eq: "logo1.png" }) {
           childImageSharp {
@@ -72,9 +105,6 @@ export default props => (
         }
       }
     `}
-    render={(data) => (
-      <Header data={data.siteIcon} {...props} />
-    )}
-    
+    render={data => <Header data={data.siteIcon} {...props} />}
   />
 )

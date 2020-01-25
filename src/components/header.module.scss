@@ -2,13 +2,11 @@
 @import "../styles/mixins";
 
 .header {
-  position: absolute;
+  position: sticky;
   z-index: 2;
+  padding: 0.5rem;
   left: 0;
   right: 0;
-}
-
-.header-opaque {
   background-color: $mainWhite;
 }
 
@@ -120,13 +118,6 @@
 
 .active-nav {
   width: 100vw;
-  background-color: rgba($mainBlack, 0.7);
-  animation: slide-down 0.4s ease-out;
-
-}
-
-.active-nav-transparent {
-  width: 100vw;
   background-color: white;
   animation: slide-down 0.4s ease-out;
 }
@@ -136,18 +127,6 @@
 
   @include atMedium {
     transform: translateY(0);
-  }
-}
-
-.nav-transparent {
-  transform: translateY(-100%);
-
-  @include atMedium {
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    transform: translateY(0);
-    background-color: rgba($mainBlack, 0.7);
   }
 }
 
@@ -185,25 +164,6 @@
 .nav-item {
   font-weight: 800;
   text-decoration: none;
-  color: $mainWhite;
-  font-size: 0.8rem;
-
-  @include atSmall {
-    font-size: 1rem;
-  }
-}
-
-.nav-item:hover {
-  color: $mainYellow;
-}
-
-.nav-item-active {
-  color: $mainYellow;
-}
-
-.nav-item-opaque {
-  font-weight: 800;
-  text-decoration: none;
   color: $secondBlack;
   font-size: 0.8rem;
 
@@ -212,10 +172,10 @@
   }
 }
 
-.nav-item-opaque:hover {
+.nav-item:hover {
   color: $mainGreen;
 }
 
-.nav-item-opaque-active {
+.nav-item-active {
   color: $mainGreen;
 }
