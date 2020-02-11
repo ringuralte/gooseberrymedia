@@ -15,11 +15,12 @@ const Head = ({ title }) => {
   return (
     <Helmet>
       <title>{`${title} | ${data.site.siteMetadata.title}`}</title>
-      <script
+      {/* <script
+        crossorigin
         src="https://www.google.com/recaptcha/api.js"
         async
         defer
-      ></script>
+      ></script> */}
       <meta charSet="utf-8" />
       <meta
         name="Description"
