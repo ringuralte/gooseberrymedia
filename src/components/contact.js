@@ -1,14 +1,14 @@
-import React from 'react' 
+import React from "react"
 
-import contactStyles from './contact.module.scss'
+import contactStyles from "./contact.module.scss"
 
 const ContactForm = () => {
   return (
     <div className={contactStyles.wrapper}>
       <h2 className={contactStyles.header}>Write To Us</h2>
-      <form 
+      <form
         name="contact"
-        method="post" 
+        method="post"
         data-netlify="true"
         data-netlify-recaptcha="true"
         data-netlify-honeypot="bot-field"
@@ -19,7 +19,7 @@ const ContactForm = () => {
         <div className={contactStyles.firstHalf}>
           <div className={contactStyles.format}>
             <label htmlFor="name">Name</label>
-            <input type="text" name="name" id="name" required/>
+            <input type="text" name="name" id="name" required />
           </div>
           <div className={contactStyles.format}>
             <label htmlFor="phone">Phone</label>
@@ -27,22 +27,26 @@ const ContactForm = () => {
           </div>
           <div className={contactStyles.format}>
             <label htmlFor="email">Email</label>
-            <input type="email" name="email" id="email" required/>
+            <input type="email" name="email" id="email" required />
           </div>
         </div>
         <div className={contactStyles.secondHalf}>
           <div className={contactStyles.format}>
             <label htmlFor="message">Message</label>
-            <textarea name="message" id="message" rows="6" required/>
+            <textarea name="message" id="message" rows="6" required />
           </div>
         </div>
         <div className={contactStyles.button}>
-          <input className={contactStyles.buttonInput} type="submit" value="Submit" />
-          <div data-netlify-recaptcha />
+          <input
+            className={contactStyles.buttonInput}
+            type="submit"
+            value="Submit"
+          />
+          <div data-netlify-recaptcha="true" />
         </div>
       </form>
     </div>
   )
 }
 
-export default ContactForm;
+export default ContactForm
