@@ -5,7 +5,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Head from "../components/head"
 import contactPageStyles from "./contact.module.scss"
-// import ContactForm from "../components/contact"
+import ContactForm from "../components/contact"
 
 const Contact = props => {
   return (
@@ -40,7 +40,7 @@ const Contact = props => {
             />
           </div>
         </div>
-        {/* <ContactForm /> */}
+        <ContactForm />
       </div>
     </Layout>
   )

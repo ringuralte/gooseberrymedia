@@ -18,7 +18,8 @@ const Home = props => {
             <h1>Gooseberry Studios</h1>
             <h2 className={homeStyles.headlineTextUpper}> Turn your Dreams </h2>
             <p className={homeStyles.headlineTextStrong}>
-              into <h2 className={homeStyles.headlineTextYellow}>Reality</h2>
+              into{" "}
+              <span className={homeStyles.headlineTextYellow}>Reality</span>
             </p>
             <div>
               <a href="#form" className={homeStyles.button}>
