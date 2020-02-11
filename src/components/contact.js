@@ -1,4 +1,5 @@
 import React from "react"
+import ReCAPTCHA from "react-google-recaptcha"
 
 import contactStyles from "./contact.module.scss"
 
@@ -12,7 +13,7 @@ const ContactForm = () => {
         data-netlify="true"
         data-netlify-recaptcha="true"
         data-netlify-honeypot="bot-field"
-        action="#"
+        action="/"
       >
         <input type="hidden" name="bot-field" />
         <input type="hidden" name="form-name" value="contact" />
@@ -42,7 +43,7 @@ const ContactForm = () => {
             type="submit"
             value="Submit"
           />
-          <div data-netlify-recaptcha="true" />
+          <ReCAPTCHA sitekey={process.env.GATSBY_RECAPTCHA_KEY} />
         </div>
       </form>
     </div>
