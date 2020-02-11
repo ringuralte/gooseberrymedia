@@ -1,8 +1,8 @@
-@import '../styles/variables';
-@import '../styles/mixins';
+@import "../styles/variables";
+@import "../styles/mixins";
 
 .footer {
-  background-color: $mainGreen;
+  background-color: $darkGreen;
   color: $mainWhite;
   padding: 2rem;
 }
@@ -11,16 +11,16 @@
   margin: 0 auto;
   flex-direction: column;
   align-items: center;
-  font-size: .9rem;
+  font-size: 0.9rem;
 
-  @include atMedium {
+  @include atFooterMedium {
     flex-direction: row;
     justify-content: space-between;
     font-size: 1rem;
   }
 
   @include atLarge {
-    max-width: 50vw;
+    max-width: 80vw;
   }
 }
 

@@ -2,12 +2,12 @@
 @import "../styles/mixins";
 
 .header {
-  position: sticky;
+  position: fixed;
   z-index: 2;
   padding: 0.5rem;
   left: 0;
   right: 0;
-  background-color: $mainWhite;
+  background-color: rgba($mainWhite, 0.8);
 }
 
 .head-wrapper {
@@ -118,7 +118,7 @@
 
 .active-nav {
   width: 100vw;
-  background-color: white;
+  // background-color: rgba($mainWhite, 0.3);
   animation: slide-down 0.4s ease-out;
 }
 

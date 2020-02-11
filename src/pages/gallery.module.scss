@@ -1,15 +1,15 @@
-@import '../styles/mixins';
-@import '../styles/variables';
+@import "../styles/mixins";
+@import "../styles/variables";
 .container {
   background-color: rgba($mainWhite, 0.7);
 }
 
 .wrapper {
-  margin: 0 auto;
+  margin: 50px auto 0 auto;
   padding: 1rem 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: .2em;
+  grid-gap: 0.2em;
 
   @include atSmall {
     grid-template-columns: 1fr 1fr 1fr;
@@ -32,22 +32,21 @@
 
 .dialog-image {
   width: 100%;
-
 }
 
 .dialog {
   width: 100vw;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
   background-color: rgba($mainWhite, 0.7);
-  
-  button{
+
+  button {
     background-color: $secondGreen;
     border: 1px solid $secondBlack;
     border-radius: 50%;
     color: $mainWhite;
     font-weight: 900;
-    margin-bottom: .3rem;
-    margin-right: .3rem;
+    margin-bottom: 0.3rem;
+    margin-right: 0.3rem;
     display: block;
     margin-left: auto;
   }
