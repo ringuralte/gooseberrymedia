@@ -43,7 +43,7 @@ const ContactForm = () => {
             type="submit"
             value="Submit"
           />
-          <ReCAPTCHA sitekey={process.env.GATSBY_RECAPTCHA_KEY} />
+          <ReCAPTCHA sitekey={process.env.GATSBY_SITE_RECAPTCHA_KEY} />
         </div>
       </form>
     </div>
