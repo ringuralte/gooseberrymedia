@@ -8,7 +8,7 @@ const ContactForm = () => {
       <h2 className={contactStyles.header}>Write To Us</h2>
       <form
         name="contact"
-        method="post"
+        method="POST"
         data-netlify="true"
         data-netlify-recaptcha="true"
         data-netlify-honeypot="bot-field"
