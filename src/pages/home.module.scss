@@ -242,7 +242,7 @@
 .button {
   border-radius: 4px;
   box-shadow: 2px 3px 3px $mainBlack;
-  background-color: $mainOrange;
+  background-color: $secondOrange;
   text-decoration: none;
   font-size: 1rem;
   color: $mainWhite;
@@ -253,4 +253,7 @@
     padding: 1rem 3rem;
     font-size: 1.55rem;
   }
+}
+.button:hover {
+  background-color: $mainOrange;
 }

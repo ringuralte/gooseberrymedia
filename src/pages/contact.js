@@ -5,11 +5,11 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Head from "../components/head"
 import contactPageStyles from "./contact.module.scss"
-import ContactForm from "../components/contact"
+import ContactForm from "../components/contactForm"
 
 const Contact = props => {
   return (
-    <Layout transparent={false}>
+    <Layout>
       <Head title="Contact" />
       <div className={contactPageStyles.wrapper}>
         <div className={contactPageStyles.info}>

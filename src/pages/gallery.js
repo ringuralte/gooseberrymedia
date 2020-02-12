@@ -19,7 +19,7 @@ class Gallery extends React.Component {
 
   render() {
     return (
-      <Layout transparent={true}>
+      <Layout>
         <Head title="Gallery" />
 
         <DialogOverlay

@@ -5,12 +5,12 @@ import Fade from "react-reveal/Fade"
 
 import Head from "../components/head"
 import Layout from "../components/layout"
-import ContactForm from "../components/contact"
+import ContactForm from "../components/contactForm"
 import homeStyles from "./home.module.scss"
 
 const Home = props => {
   return (
-    <Layout transparent={true}>
+    <Layout>
       <Head title="Home" />
       <div className={homeStyles.home}>
         <div className={homeStyles.headlineText}>

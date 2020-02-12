@@ -2,7 +2,7 @@ import React from "react"
 import ReCaptcha from "react-google-recaptcha"
 // import Recaptcha from "./recaptcha"
 
-import contactStyles from "./contact.module.scss"
+import contactStyles from "./contactForm.module.scss"
 
 class ContactForm extends React.Component {
   constructor() {
