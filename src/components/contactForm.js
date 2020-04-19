@@ -27,6 +27,7 @@ class ContactForm extends React.Component {
       <div className={contactStyles.wrapper}>
         <h2 className={contactStyles.header}>Write To Us</h2>
         <form
+          className={contactStyles.formWrapper}
           name="contact"
           method="POST"
           data-netlify="true"

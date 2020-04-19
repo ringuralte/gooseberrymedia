@@ -1,6 +1,11 @@
 @import "../styles/mixins";
 @import "../styles/variables";
 
+.wrapper {
+  max-width: 100vw;
+  position: relative;
+}
+
 .home {
   position: relative;
   margin-top: 60px;
@@ -11,7 +16,7 @@
   display: block;
 
   @include atLarge {
-    width: 100%;
+    // width: 100%;
     height: 80vh;
   }
 }
@@ -256,4 +261,31 @@
 }
 .button:hover {
   background-color: $mainOrange;
+}
+
+.video-wrapper {
+  text-align: center;
+  color: $mainBlack;
+  a {
+    text-decoration: none;
+    color: $mainGreen;
+  }
+}
+
+.video-content {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 200px;
+
+  @include atMedium {
+    width: 100%;
+    height: 400px;
+  }
+
+  @include atLarge {
+    width: 800px;
+    height: 400px;
+    padding: 2rem;
+  }
 }
